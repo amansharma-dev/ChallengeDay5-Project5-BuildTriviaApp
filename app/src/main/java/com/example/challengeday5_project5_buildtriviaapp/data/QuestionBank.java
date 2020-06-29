@@ -24,7 +24,8 @@ public class QuestionBank {
 
     private String url = "https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json";
     ArrayList<Question> questionArrayList = new ArrayList<>();
-    public List<Question> getQuestions(){
+
+    public List<Question> getQuestions(final AnswerListAsyncResponse callback){
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET,
                 url,
                 null,
@@ -47,6 +48,7 @@ public class QuestionBank {
                                 e.printStackTrace();
                             }
                         }
+                        if(null != callback) callback.processFinished(questionArrayList);
                     }
                 }, new Response.ErrorListener() {
             @Override
