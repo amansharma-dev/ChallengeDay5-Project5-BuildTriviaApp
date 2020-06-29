@@ -36,10 +36,13 @@ public class QuestionBank {
                         for(int i = 0; i< response.length() ; i++){
                             try {
                                 Question question = new Question();
-                                //question.setAnswer(response.getJSONArray(i).toString());
-                                //question.setAnswerTrue(response.getJSONArray(i).getBoolean());
-                                Log.d(TAG, "onResponse: "+response.getJSONArray(i).getString(0));
-                                Log.d(TAG, "onResponse: "+response.getJSONArray(i).getBoolean(1));
+                                question.setAnswer(response.getJSONArray(i).get(0).toString());
+                                question.setAnswerTrue(response.getJSONArray(i).getBoolean(1));
+//                                Log.d(TAG, "onResponse: "+response.getJSONArray(i).getString(0));
+//                                Log.d(TAG, "onResponse: "+response.getJSONArray(i).getBoolean(1));
+
+                                questionArrayList.add(question);
+                                Log.d(TAG, "onResponse: "+question);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
