@@ -30,7 +30,8 @@
         app:layout_constraintBottom_toTopOf="@id/answerCardView"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="15dp"
-        android:text="@string/_0_out_of_100"
+        android:text=""
+        android:textStyle="bold"
         android:textSize="18sp"
         android:fontFamily="serif-monospace"
         android:textColor="@color/colorText"/>
@@ -38,7 +39,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/answerCardView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="210dp"
         android:padding="25dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,12 +53,11 @@
             android:id="@+id/answerTextViewCV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="qwertyuipdkdlasd"
-            android:padding="10dp"
             android:fontFamily="sans-serif-thin"
-            android:textStyle="bold"
+            android:padding="10dp"
+            android:text=""
             android:textSize="26sp"
-            />
+            android:textStyle="bold" />
 
         
     </androidx.cardview.widget.CardView>
