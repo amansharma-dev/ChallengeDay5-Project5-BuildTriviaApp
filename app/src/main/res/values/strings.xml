@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ChallengeDay5-Project5-BuildTriviaApp</string>
+    <string name="trivia_app_title">Trivia App</string>
+    <string name="true_btn">True</string>
+    <string name="false_btn">False</string>
+    <string name="back_btn">Back</string>
+    <string name="_0_out_of_100">0 out of 100</string>
 </resources>

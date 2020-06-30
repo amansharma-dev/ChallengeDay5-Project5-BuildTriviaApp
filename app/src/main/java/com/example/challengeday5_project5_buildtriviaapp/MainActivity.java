@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        List<Question> questionList = new QuestionBank().getQuestions(new AnswerListAsyncResponse() {
+        new QuestionBank().getQuestions(new AnswerListAsyncResponse() {
             @Override
             public void processFinished(ArrayList<Question> questionArrayList) {
                 Log.d(TAG, "processFinished: "+questionArrayList);
             }
         });
-//        Log.d(TAG, "onCreate: "+questionList);
+
 
     }
 }
